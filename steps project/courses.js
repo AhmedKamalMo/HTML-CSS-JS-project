@@ -1,3 +1,21 @@
+// ratting
+document.addEventListener('DOMContentLoaded', () => {
+  const ratingStars = document.querySelectorAll('.rating span');
+  
+  ratingStars.forEach((star, index) => {
+      star.addEventListener('click', () => {
+          ratingStars.forEach((s, i) => {
+              if (i <= index) {
+                  s.classList.remove('inactive');
+              } else {
+                  s.classList.add('inactive');
+              }
+          });
+      });
+  });
+});
+
+
 // var videoDiv = document.getElementById("showVideo");
 var root = document.getElementsByClassName("material")[0];
 // get data from json
