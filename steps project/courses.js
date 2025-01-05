@@ -1,4 +1,6 @@
-// ratting
+
+// for ratiing
+
 document.addEventListener('DOMContentLoaded', () => {
   const ratingStars = document.querySelectorAll('.rating span');
   
@@ -14,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   });
 });
-
 
 // var videoDiv = document.getElementById("showVideo");
 var root = document.getElementsByClassName("material")[0];
