@@ -11,7 +11,7 @@ body {
     align-items: center;
 }
 
-
+/* 
 header {
     background-color: rgb(149, 167, 151);
     padding: 20px 10px;
@@ -48,7 +48,7 @@ nav a {
     width: 720px;
     border-radius: 20px;
     margin-left: 315px;
-}
+} */
 
 .categories {
     font-family: "Marcellus SC", serif;
@@ -74,13 +74,13 @@ nav a {
     margin: 0 auto;
 }
 
-footer {
+/* footer {
     background-color: #95a797;
     padding: 20px;
     text-align: center;
     color: white;
     font-size: 14px;
-}
+} */
 
 .card-container {
     display: flex;

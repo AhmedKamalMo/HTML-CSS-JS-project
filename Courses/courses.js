@@ -2,7 +2,7 @@ var root = document.getElementsByClassName("material")[0];
 var cardContainer = document.getElementsByClassName("card-container")[0];
 var JsonData;
 var htx = new XMLHttpRequest();
-htx.open("GET", "/data.json");
+htx.open("GET", "../data/data.json");
 
 htx.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
@@ -18,7 +18,7 @@ htx.onreadystatechange = function () {
         card.appendChild(imagePlaceholder);
 
         var poster = document.createElement("img");
-        poster.src = item.poster;
+        poster.src = "../assets/courses/" +item.poster;
         poster.classList.add("poster");
         poster.style.cursor = "pointer";
         poster.style.width = "100%";
@@ -62,7 +62,7 @@ htx.onreadystatechange = function () {
         cardContent.appendChild(enrollButton);
         cardContainer.appendChild(card);
         enrollButton.addEventListener("click", function () {
-          var videoPageUrl = `/incourse.html?title=${encodeURIComponent(
+          var videoPageUrl = `./incourse.html?title=${encodeURIComponent(
             item.title
           )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
             category
@@ -101,7 +101,7 @@ function selected(index) {
     card.appendChild(imagePlaceholder);
 
     var poster = document.createElement("img");
-    poster.src = item.poster;
+    poster.src = "../assets/courses/"+item.poster;
     poster.classList.add("poster");
     poster.style.cursor = "pointer";
     poster.style.width = "100%";
@@ -147,7 +147,7 @@ function selected(index) {
     cardContainer.appendChild(card);
 
     enrollButton.addEventListener("click", function () {
-      var videoPageUrl = `/incourse.html?title=${encodeURIComponent(
+      var videoPageUrl = `./incourse.html?title=${encodeURIComponent(
         item.title
       )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
         category

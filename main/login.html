@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./loginstyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
+
+    <article>
+      <div class="login-container">
+        <form action="./Home.html" id="form" method="get">
+          <h2>Login</h2>
+
+          <div class="input-group">
+            <label for="email" class="em">email</label>
+            <input type="email" id="emailinput" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="password" class="pass">password</label>
+            <input type="password" id="passwordinput" name="password" required />
+          </div>
+
+          <div class="link">
+            <a href="./forgetpass.html">Forgot Password?</a>
+            <a href="./registration.html">Dont have an account?</a>
+          </div>
+        <span id="errorpass" style="color: red; font-size: 20px;"></span>
+
+          <button type="submit"  class="login-button">Login</button>
+
+          <!-- <button onclick="removelocal()">removelocal</button> -->
+
+        </form>
+      </div>
+    </article>
+    <img src="./delivery robot with boy and girl.png" alt="" />
+
+    <script src="./loginscript.js"></script>
+  </body>
+</html>

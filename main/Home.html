@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Homestyle.css" />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&family=Marcellus+SC&family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <button class="signout" onclick="removelocal()">Sign Out</button>
+      <nav>
+        <p >Steps</p>
+        <div>
+          <a href="">Main</a>
+          <a href="">courses</a>
+          <a href="">pricing</a>
+          <a href="">My learning</a>
+          <a href="">Login</a>
+          <a href="">Search</a>
+        </div>
+        <p id="emails" class="profile"></p>
+      </nav>
+    </header>
+
+    <main>
+      <section class="jmain">
+        <div class="join">
+          <p>JOIN TO OUR COMMUNITY TO LEARN MORE</p>
+          <button onclick="goToPage()">Join</button>
+        </div>
+        <img class="kids" src="./young kids with mobile phone.png" alt="" />
+      </section>
+      <!--  -->
+      <section class="skills">
+        <iframe
+          width="387"
+          height="317"
+          src="https://www.youtube.com/embed/oOpF-FzXcoQ"
+          title="[Arabic] Implement Functions With C++ #28 - Generate Characters"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <div class="twovideos">
+          <iframe
+            width="387"
+            height="150"
+            src="https://www.youtube.com/embed/oOpF-FzXcoQ"
+            title="[Arabic] Implement Functions With C++ #28 - Generate Characters"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <iframe
+            width="387"
+            height="150"
+            src="https://www.youtube.com/embed/oOpF-FzXcoQ"
+            title="[Arabic] Implement Functions With C++ #28 - Generate Characters"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <iframe
+          width="387"
+          height="317"
+          src="https://www.youtube.com/embed/oOpF-FzXcoQ"
+          title="[Arabic] Implement Functions With C++ #28 - Generate Characters"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <section class="cquete">
+        <div class="quete">
+          <img src="./Quote Left.png" height="80" alt="" />
+          <p>
+            I’ve been so impressed with this e-learning platform! My daughter
+            absolutely loves the interactive games and videos
+          </p>
+          <img class="getquote" src="./Get Quote.png" height="80" alt="" />
+          <img class="group" src="./Group 1.png" alt="" />
+        </div>
+      </section>
+      <!--  -->
+      <section class="teachers">
+        <div class="card-container">
+          <div class="card">
+            <img src="./145976.png" alt="Teacher 1" />
+            <p>Mark</p>
+          </div>
+          <div class="card">
+            <img src="./168730.png" alt="Teacher 2" />
+            <p>Sma</p>
+          </div>
+          <div class="card">
+            <img src="./791214_man_512x512.png" alt="Teacher 3" />
+            <p>Ahmed</p>
+          </div>
+          <div class="card">
+            <img src="./168734.png" alt="Teacher 4" />
+            <p>Manar</p>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <footer>
+        <div>
+          <a href="">Contact With Us</a>
+          <a href="">Steps</a>
+          <a href="">0128926565</a>
+        </div>
+      </footer>
+    </main>
+    <!--  -->
+
+    <script>
+      function getlocal() {
+        var emailval = JSON.parse(localStorage.getItem("emails")) || [] ;
+        var passval = JSON.parse(localStorage.getItem("pass") ) || [];
+        return { emailval, passval };
+
+
+        
+        // localStorage.emails = JSON.stringify(emails);
+        // var storedemails = JSON.parse(localStorage.emails);
+      }
+
+      let email1 = getlocal();
+
+      // let displayname = (document.getElementById("emails").innerText = email1);
+      console.log(email1)
+      // let toparr = email1[email1.length - 1]
+      // let dis = (document.getElementById("emails").innerText = toparr);
+
+      window.addEventListener("DOMContentLoaded", function () {
+    var currentEmail = localStorage.getItem("currentEmail");
+    if (currentEmail) {
+        document.getElementById("emails").innerText = `Welcome, ${currentEmail}`;
+    } 
+});
+
+    function removelocal() {
+      // localStorage.removeItem("email");
+      // localStorage.removeItem("userpassword");
+
+    location.href = "./login.html";
+    }
+
+    function goToPage(){
+    location.href = "./registration.html";
+
+    }
+    </script>
+
+
+
+
+
+  </body>
+</html>
