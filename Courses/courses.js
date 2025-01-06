@@ -62,7 +62,7 @@ htx.onreadystatechange = function () {
         cardContent.appendChild(enrollButton);
         cardContainer.appendChild(card);
         enrollButton.addEventListener("click", function () {
-          var videoPageUrl = `./incourse.html?title=${encodeURIComponent(
+          var videoPageUrl = `../Course/incourse.html?title=${encodeURIComponent(
             item.title
           )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
             category
@@ -147,7 +147,7 @@ function selected(index) {
     cardContainer.appendChild(card);
 
     enrollButton.addEventListener("click", function () {
-      var videoPageUrl = `./incourse.html?title=${encodeURIComponent(
+      var videoPageUrl = `../Course/incourse.html?title=${encodeURIComponent(
         item.title
       )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
         category
