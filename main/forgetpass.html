@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./forgetstyle.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p>Steps</p>
+        <div>
+          <a href="">Main</a>
+          <a href="">courses</a>
+          <a href="">pricing</a>
+          <a href="">my learning</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="login-container">
+        <div class="input-group">
+            <label for="email" class="em">Please enter your email</label>
+            <input type="email" id="emailinput" name="email" required />
+          </div>
+          <button type="submit"  class="login-button" onclick="getpassword()">Get password</button>
+          <h3  id="show"></h3>
+          <button type="submit"  class="login-button" onclick="gologein()">Go to login page</button>
+
+    </main>
+
+
+    <img src="./delivery robot with boy and girl.png" alt="" />
+
+    <script>
+      function getlocal() {
+        var emailval = JSON.parse(localStorage.getItem("emails")) || [];
+        var passval = JSON.parse(localStorage.getItem("pass")) || [];
+        return { emailval, passval };
+      }
+
+      function getpassword() {
+        var getpass = document.getElementById("emailinput").value;
+        console.log(getpass);
+
+        var { emailval, passval } = getlocal();
+        console.log({ emailval, passval });
+
+        var emailindex = emailval.indexOf(getpass);
+
+        if (emailindex !== -1) {
+          // If the email exists, show the corresponding password
+          document.getElementById("show").innerText =
+            "Your password is: " + passval[emailindex];
+        } else {
+          // If the email does not exist
+          document.getElementById("show").innerText =
+            "There is no email with this name";
+        }
+      }
+
+      function gologein(){
+        location.href = "./login.html"
+      }
+    </script>
+  </body>
+</html>

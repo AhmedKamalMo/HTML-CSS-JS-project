@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* profile section */
+.profile {
+    padding: 90px;
+}
+
+.profile .profile__info {
+    height: 200px;
+    background-color: #D9D9D975;
+    border-radius: 20px;
+    position: relative;
+}
+
+.profile .profile__info div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 43%;
+    left: 5%;
+}
+
+.profile .profile__info div img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+
+/* ================================ */
+.profile__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    margin-top: 100px;
+}
+
+.profile__courses {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile__courses h1 {
+    padding-left: 30px;
+}
+
+.profile__courses__list {
+    
+    background-color: #D9D9D9;
+    border-top: 5px solid #627763;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.profile__courses__list__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px
+}
+
+.profile__courses__list__item .video {
+    position: relative;
+}
+
+.profile__courses__list__item .video .video-icon {
+    position: absolute;
+    left: 60px;
+    top: 35px
+}
+
+.profile__courses__list__item p {
+    margin-top: 10px;
+}
+
+.progress {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.progress h1 {
+    padding-left: 30px;
+}
+
+.progress_list {
+    background-color: #D9D9D9;
+    border-top: 5px solid #FF8686;
+    padding: 40px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.progress_list_item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.progress_list_item .info p{
+margin-top: 10px;
+}
