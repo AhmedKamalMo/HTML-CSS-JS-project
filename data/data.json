@@ -2,12 +2,12 @@
   "math": {
     "id": "math",
     "description": "Learn numbers, addition, subtraction, and more in fun and easy ways.",
-    "img": "./math.webp",
+    "img": "../assets/courses/math.webp",
     "videos": [
       {
         "title": "Addition-Learning to add with Dinosaurs",
         "src": "https://drive.google.com/file/d/1n7hBMgbH0tBv_3OdIWPwfQuTvAPXN3Kt/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
         "quiz": [
           {
             "question": "What is 2 + 2?",
@@ -39,7 +39,7 @@
       {
         "title": "Addition exercises for kids - Learn to add with Dino",
         "src": "https://drive.google.com/file/d/1ux7ZXPExzSjM4R8br117l_iyEDsQPLLs/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -72,7 +72,7 @@
       {
         "title": "Addition exercises - Learn to add with Dino with burgers",
         "src": "https://drive.google.com/file/d/1XLZ-p7cYaSlSDgWn1HMbyVhfwhcWs_kD/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -105,7 +105,7 @@
       {
         "title": "Subtractions - Learn to subtract with Dinosaurs",
         "src": "https://drive.google.com/file/d/1xxkc57M0oULHsZP38T39gi1CyHN6LXWL/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -138,7 +138,7 @@
       {
         "title": "Subtraction exercises-Learn to subtract with Dino and Saury",
         "src": "https://drive.google.com/file/d/1C8hn4_wfMkeOgBLPO5p6Jp-sWyK1AfAO/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -171,7 +171,7 @@
       {
         "title": "Addition for kids - Exercises",
         "src": "https://drive.google.com/file/d/1bTSCfJx-DDJZHTsuFKog5cvPbG3_dlGa/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -204,7 +204,7 @@
       {
         "title": "Subtraction exercises - Learn to subtract with Dinosaurs",
         "src": "https://drive.google.com/file/d/1mmCShdG4lHMbL2SnFM_OxduI5zDQMOZq/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
 
         "quiz": [
           {
@@ -237,7 +237,7 @@
       {
         "title": "Subtraction for kids - Learn how to subtract",
         "src": "https://drive.google.com/file/d/1FN-iz1OBu_QqaBI4gpsRGy-_C9U3wEsf/preview",
-        "poster": "math.webp",
+        "poster": "../assets/courses/math.webp",
         "quiz": [
           {
             "question": "What is 7 - 3?",
@@ -271,12 +271,12 @@
   "cooking": {
     "id": "cooking",
     "description": "Learn to cook tasty dishes step by step.",
-    "img": "./cooking.jpg",
+    "img": "../assets/courses/cooking.jpg",
     "videos": [
       {
         "title": "Cuisinart Culinary School - Episode 1",
         "src": "https://drive.google.com/file/d/1xQw2ZjDnsA7VzKR6YE5YAbHmA0kfyi8F/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
         "quiz": [
           {
             "question": "What is the first step in the culinary process?",
@@ -323,7 +323,7 @@
       {
         "title": "Cuisinart Culinary School - Episode 2",
         "src": "https://drive.google.com/file/d/1CYrcMgzF8RcezaKQRWWcgJIO4wzCMIcw/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
 
         "quiz": [
           {
@@ -376,7 +376,7 @@
       {
         "title": "Cuisinart Culinary School - Episode 3",
         "src": "https://drive.google.com/file/d/1IHmrAB5iasF3O-5qSnHd2UECSy3-bw00/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
 
         "quiz": [
           {
@@ -419,7 +419,7 @@
       {
         "title": "Cuisinart Culinary School - Episode 4",
         "src": "https://drive.google.com/file/d/1pQFP7GR3ArOgSSk225F1yBU2_Ij2lwQw/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
 
         "quiz": [
           {
@@ -467,7 +467,7 @@
       {
         "title": "Cuisinart Culinary School - Episode 5",
         "src": "https://drive.google.com/file/d/1aaSCGs6h7uk2BC3qWLsAGWIncQipFHmZ/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
 
         "quiz": [
           {
@@ -520,7 +520,7 @@
       {
         "title": "Cuisinart Culinary School - Episode 6",
         "src": "https://drive.google.com/file/d/106gvVTQ9_NyK4yqjjBSbnBmhnI5gY5Mk/preview",
-        "poster": "cooking.jpg",
+        "poster": "../assets/courses/cooking.jpg",
 
         "quiz": [
           {
@@ -580,12 +580,12 @@
   "Science": {
     "id": "Science",
     "description": "Explore exciting experiments and science facts.",
-    "img": "science.jpg",
+    "img": "../assets/courses/science.jpg",
     "videos": [
       {
         "title": "Sources of Light for kids",
         "src": "https://drive.google.com/file/d/1LZxibhvVNT2hzVwwQ9GMK7umU-dqs-3M/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -623,7 +623,7 @@
       {
         "title": "Light and Shadows for Kids",
         "src": "https://drive.google.com/file/d/1UOYwiYMZTX3q6Ozi-GnXqN6bPaGBiePp/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
         "quiz": [
           {
             "question": "What causes shadows?",
@@ -680,7 +680,7 @@
       {
         "title": "Pushing and Pulling: What is the Difference?",
         "src": "https://drive.google.com/file/d/15MA2WzgGSQodNItfbKLL66QIrONUuysH/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -738,7 +738,7 @@
       {
         "title": "Physical Properties of Materials",
         "src": "https://drive.google.com/file/d/1CXj9NyGeQgqGNtumcBk2tgf9fQwlgJVY/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
         "quiz": [
           {
             "question": "What is a physical property?",
@@ -790,7 +790,7 @@
       {
         "title": "Force and Motion for Kids",
         "src": "https://drive.google.com/file/d/10ir6Nr3GeQlDc6OSgbnqbcORbLdtayUc/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -848,7 +848,7 @@
       {
         "title": "States of Matter for Kids",
         "src": "https://drive.google.com/file/d/1Z43q160dz39gi2ewso681bSqo2oI02nQ/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -899,12 +899,12 @@
   "softSkills": {
     "id": "soft skills",
     "description": "Improve communication and teamwork skills",
-    "img": "./softskills.jpg",
+    "img": "../assets/courses/softskills.jpg",
     "videos": [
       {
         "title": "Sources of Light for kids",
         "src": "https://drive.google.com/file/d/1LZxibhvVNT2hzVwwQ9GMK7umU-dqs-3M/preview",
-        "poster": "softskills.jpg",
+        "poster": "../assets/courses/softskills.jpg",
 
         "quiz": [
           {
@@ -942,7 +942,7 @@
       {
         "title": "Light and Shadows for Kids",
         "src": "https://drive.google.com/file/d/1UOYwiYMZTX3q6Ozi-GnXqN6bPaGBiePp/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
         "quiz": [
           {
             "question": "What causes shadows?",
@@ -999,7 +999,7 @@
       {
         "title": "Pushing and Pulling: What is the Difference?",
         "src": "https://drive.google.com/file/d/15MA2WzgGSQodNItfbKLL66QIrONUuysH/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -1057,7 +1057,7 @@
       {
         "title": "Physical Properties of Materials",
         "src": "https://drive.google.com/file/d/1CXj9NyGeQgqGNtumcBk2tgf9fQwlgJVY/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
         "quiz": [
           {
             "question": "What is a physical property?",
@@ -1109,7 +1109,7 @@
       {
         "title": "Force and Motion for Kids",
         "src": "https://drive.google.com/file/d/10ir6Nr3GeQlDc6OSgbnqbcORbLdtayUc/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -1167,7 +1167,7 @@
       {
         "title": "States of Matter for Kids",
         "src": "https://drive.google.com/file/d/1Z43q160dz39gi2ewso681bSqo2oI02nQ/preview",
-        "poster": "science.jpg",
+        "poster": "../assets/courses/science.jpg",
 
         "quiz": [
           {
@@ -1217,12 +1217,12 @@
   "draw": {
     "id": "Drawing",
     "description": "Learn to draw and improve your art skills.",
-    "img": "./draw.jpg",
+    "img": "../assets/courses/draw.jpg",
     "videos": [
       {
         "title": "Learn How to Draw for Beginners",
         "src": "https://drive.google.com/file/d/1dT7HvbwPxnKWKh6iUyV-jkz9yb8wPCdq/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
         "quiz": [
           {
             "question": "What is the first step in learning how to draw?",
@@ -1259,7 +1259,7 @@
       {
         "title": "How to Draw Anything with Construction",
         "src": "https://drive.google.com/file/d/1tJG4EG6l5_JGlzpgKWUMLBtgB3JylB2g/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
 
         "quiz": [
           {
@@ -1297,7 +1297,7 @@
       {
         "title": "How to Draw Heads for Beginners",
         "src": "https://drive.google.com/file/d/1QQPJSkpOCbJEo9Yvi2Ek4oWtrS90pHAd/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
 
         "quiz": [
           {
@@ -1330,7 +1330,7 @@
       {
         "title": "Drawing Faces - A Beginners Guide",
         "src": "https://drive.google.com/file/d/1czcYU7qXbG4hYOoZBvs1rwFqxUUfH7E-/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
 
         "quiz": [
           {
@@ -1363,7 +1363,7 @@
       {
         "title": "Drawing Better Poses - The Easy Way",
         "src": "https://drive.google.com/file/d/1rRaJ4PmsxCXI4rsxorqq2uc8u-X8eW3Y/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
 
         "quiz": [
           {
@@ -1401,7 +1401,7 @@
       {
         "title": "Perspective Drawing for Beginners",
         "src": "https://drive.google.com/file/d/13V4dwOU_uPP-NydQbSgLt8037ubZi38w/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
 
         "quiz": [
           {
@@ -1439,7 +1439,7 @@
       {
         "title": "Drawing Objects in Perspective",
         "src": "https://drive.google.com/file/d/1HUiT46CeDFk_qSBtIKYFRSj5tkX23BzB/preview",
-        "poster": "draw.jpg",
+        "poster": "../assets/courses/draw.jpg",
         "quiz": [
           {
             "question": "What is the purpose of drawing objects in perspective?",
