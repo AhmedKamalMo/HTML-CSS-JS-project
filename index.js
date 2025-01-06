@@ -31,6 +31,6 @@ function removelocal() {
 }
 
 function goToPage() {
-    location.href = "./registration.html";
+    location.href = "./registration/registration.html";
 
 }

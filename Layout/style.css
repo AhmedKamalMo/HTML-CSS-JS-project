@@ -13,11 +13,11 @@ header {
 
 nav {
     background-color: #FFE2E2;
-    width: 75%;
+    width: 50%;
     height: 62px;
     position: absolute;
     top: 31px;
-    left: 12.5%;
+    left: 25%;
     border-radius: 20px 20px 20px 20px;
     display: flex;
     justify-content: space-around;

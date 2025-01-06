@@ -1,61 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./loginstyle.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="./loginstyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mansalva&family=Margarine&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+   
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <!--  -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Mansalva&display=swap" rel="stylesheet" />
-  <!--  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Margarine&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <article>
+      <div class="login-container">
+        <form action="../index.html" id="form" method="get">
+          <h2>Login</h2>
 
-</head>
+          <div class="input-group">
+            <label for="email" class="em">email</label>
+            <input type="email" id="emailinput" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="password" class="pass">password</label>
+            <input type="password" id="passwordinput" name="password" required />
+          </div>
 
-<body>
-  <header>
-    <nav>
-      <p>Steps</p>
-      <div>
-        <a href="">Main</a>
-        <a href="">courses</a>
-        <a href="">pricing</a>
-        <a href="">my learning</a>
+          <div class="link">
+            <a href="../forgetPassword/forgetpass.html">Forgot Password?</a>
+            <a href="../registration/registration.html">Dont have an account?</a>
+          </div>
+        <span id="errorpass" style="color: red; font-size: 20px;"></span>
+
+          <button type="submit"  class="login-button">Login</button>
+
+          <!-- <button onclick="removelocal()">removelocal</button> -->
+
+        </form>
       </div>
-    </nav>
-  </header>
+    </article>
+    <img src="../assets/login/delivery robot with boy and girl.png" alt="" />
 
-  <article>
-    <div class="login-container">
-      <form method="post">
-        <h2>Login</h2>
-
-        <div class="input-group">
-          <label for="email" class="em">email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="input-group">
-          <label for="password" class="pass">password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-
-        <div class="link">
-          <a href="#">Forgot Password?</a>
-        </div>
-        <button type="submit" id="login" class="login-button">Login</button>
-        <h2 id="invalid"></h2>
-      </form>
-    </div>
-  </article>
-  <img src="./delivery robot with boy and girl.png" alt="">
-  <script src="login.js"></script>
-</body>
-
+    <script src="./loginscript.js"></script>
+  </body>
 </html>
