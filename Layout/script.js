@@ -22,6 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
     link.href = '../Layout/style.css';
     document.head.appendChild(link);
 
+    // Create and append the link element for the icons file
+    const link2 = document.createElement('link');
+    link2.rel = 'stylesheet';
+    link2.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
+    document.head.appendChild(link2);
+
     // Create and insert the header element
     const header = document.createElement('header');
     header.innerHTML = `
@@ -64,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (!localStorage.getItem('currentUser')) {
             let login = document.createElement('p');
-            login.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i>';
+            login.innerHTML = '<i class="fa-solid fa-right-to-bracket" style="font-size: 20px;"></i>';
             login.classList.add('item')
             login.addEventListener('click', () => {
                 window.location.href = '../Login/login.html'
