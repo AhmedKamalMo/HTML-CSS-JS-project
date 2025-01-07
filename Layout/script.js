@@ -11,7 +11,6 @@ let nav_items = [
         "name": "My learning",
         "url": "/Profile/index.html",
     },
-    
 ]
 
 
@@ -47,20 +46,30 @@ document.addEventListener("DOMContentLoaded", function () {
       
     `;
     document.body.appendChild(footer);
-    let showNavItems = (()=>{
+    (() => {
         let nav = document.getElementById('nav-links');
-        
         for (let i = 0; i < nav_items.length; i++) {
             let item = document.createElement('p');
             item.innerHTML = nav_items[i].name;
             item.classList.add('item')
-            item.addEventListener('click',()=>{
-                console.log(nav_items[i].url)
 
-                console.log(window.location.href)
-                window.location.href = nav_items[i].url;
+            item.addEventListener('click', () => {
+                if (!localStorage.getItem('currentUser') && i == 2) {
+                    alert("Please login to access this page");
+                } else {
+                    window.location.href = nav_items[i].url;
+                }
             })
-            nav.appendChild(item)
+            nav.appendChild(item);
+        }
+        if (!localStorage.getItem('currentUser')) {
+            let login = document.createElement('p');
+            login.innerHTML = '<i class="fa-solid fa-right-to-bracket"></i>';
+            login.classList.add('item')
+            login.addEventListener('click', () => {
+                window.location.href = '../Login/login.html'
+            })
+            nav.appendChild(login);
         }
     })()
 });
