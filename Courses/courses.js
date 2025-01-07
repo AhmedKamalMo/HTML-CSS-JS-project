@@ -92,12 +92,10 @@ function data(dataArray, category) {
   cardContent.appendChild(enrollButton);
   cardContainer.appendChild(card);
 
-  // enrollButton.addEventListener("click", function () {
-  //   var videoPageUrl = `/incourse.html?title=${encodeURIComponent(
-  //     dataArray.id
-  //   )}&src=${encodeURIComponent(
-  //     "https://drive.google.com/file/d/1dT7HvbwPxnKWKh6iUyV-jkz9yb8wPCdq/preview"
-  //   )}&category=${encodeURIComponent(category)}`;
-  //   window.location.href = videoPageUrl;
-  // });
+  enrollButton.addEventListener("click", function () {
+    var videoPageUrl = `../course detail/course-detail.html?&category=${encodeURIComponent(
+      category
+    )}`;
+    window.location.href = videoPageUrl;
+  });
 }
