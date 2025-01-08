@@ -11,15 +11,10 @@ let getUser = (() => {
     return currentUserData;
 })()
 
-let showUserData =(()=>{
-    username.innerText=`${currentUserData.firstName} ${currentUserData.lastName}`
-    if(currentUserData.img)
-    {
-        userImg.src = currentUserData.img;
-    }
-    else{
-        userImg.src ="https://cdn-icons-png.flaticon.com/512/149/149071.png"
-    }
+let showUserData = (() => {
+    username.innerText = `${currentUserData.firstName} ${currentUserData.lastName}`;
+    userImg.src = currentUserData.img || "https://cdn-icons-png.flaticon.com/512/149/149071.png";
+
 })()
 
 var htx = new XMLHttpRequest();
@@ -47,7 +42,7 @@ htx.onreadystatechange = function () {
                         </div>
                 `
                 coursesList.appendChild(course);
-                
+
             });
 
         }
@@ -61,9 +56,9 @@ htx.send();
 (function showQuizzes() {
     if (currentUserData.quizzes) {
         currentUserData.quizzes.forEach(q => {
-            let quiz=document.createElement("div");
-            quiz.className="progress_list_item";
-            quiz.innerHTML=`
+            let quiz = document.createElement("div");
+            quiz.className = "progress_list_item";
+            quiz.innerHTML = `
                         <div class="info">
                             <h3>${q.lesson}</h3>
                             <p>${q.courseName}</p>
@@ -77,7 +72,7 @@ htx.send();
     }
     else {
         progressList.innerHTML = `<p>you has not any quiz</p>`
-        console.log('lollll')   
+        console.log('lollll')
     }
 }
 )()

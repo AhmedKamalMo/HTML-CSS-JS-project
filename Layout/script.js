@@ -13,6 +13,8 @@ let nav_items = [
     },
 ]
 
+let currentUserData;
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -77,6 +79,22 @@ document.addEventListener("DOMContentLoaded", function () {
             })
             nav.appendChild(login);
         }
+        else {
+            let userData = getUser();
+            let user = document.createElement('div');
+            user.classList.add('userData')
+            user.innerHTML = `
+            <img src="${userData.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}"/>
+            <p>${userData.firstName + " " + userData.lastName}</p>
+        `;
+        nav.appendChild(user);
+        }
     })()
 });
 
+let getUser = () => {
+    let cUserEmail = localStorage.getItem("currentUser");
+    let users = JSON.parse(localStorage.getItem("users"))
+    let currentUserData = users.find((u) => { return u.email === cUserEmail });
+    return currentUserData;
+}
