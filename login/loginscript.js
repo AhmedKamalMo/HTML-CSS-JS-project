@@ -23,7 +23,7 @@
     if (user) {
       if (user.password === pass) {
         alert("Welcome " + user.name);
-        localStorage.setItem("currentEmail", emails);
+        localStorage.setItem("currentUser", emails);
         window.location.href = "index.html";
         } else {
           errrpass.innerHTML = "Wrong password";

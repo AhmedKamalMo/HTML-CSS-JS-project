@@ -139,3 +139,17 @@ function endQuiz() {
   score = 0;
   timer = 30;
 }
+
+let addQuizScore=(courseName,lesson,score)=>{
+    let currentUser = localStorage.getItem("currentUser");
+    let users =JSON.parse(localStorage.getItem("users"))||[];
+    let newUsers = users.map((u)=>{
+      if(u.email==currentUser){
+        if(!u.quizzes)
+          u.quizzes=[];
+        u.quizzes.push({courseName,lesson,score});
+      }
+      return u;
+    });
+    localStorage.setItem("users",JSON.stringify(newUsers));
+}

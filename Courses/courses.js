@@ -96,6 +96,22 @@ function data(dataArray, category) {
     var videoPageUrl = `../course detail/course-detail.html?&category=${encodeURIComponent(
       category
     )}`;
+    addCourseToUser(encodeURIComponent(category));
     window.location.href = videoPageUrl;
   });
+}
+
+let addCourseToUser = (courseID) => {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  let newUsers = users.map((u) => {
+    if (u.email == currentUser) {
+      if (!u.courses)
+        {u.courses = [];}
+      if (!u.courses.includes(courseID))
+       { u.courses.push(courseID);}
+    }
+    return u;
+  });
+  localStorage.setItem("users", JSON.stringify(newUsers));
 }
