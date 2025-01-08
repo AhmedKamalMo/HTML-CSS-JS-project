@@ -1,5 +1,8 @@
 let currentUserData;
 let coursesList = document.getElementsByClassName("profile__courses__list")[0];
+let progressList = document.getElementsByClassName("progress_list")[0];
+let username = document.getElementById("username");
+let userImg = document.getElementById("userimg");
 
 let getUser = (() => {
     let cUserEmail = localStorage.getItem("currentUser");
@@ -8,6 +11,16 @@ let getUser = (() => {
     return currentUserData;
 })()
 
+let showUserData =(()=>{
+    username.innerText=`${currentUserData.firstName} ${currentUserData.lastName}`
+    if(currentUserData.img)
+    {
+        userImg.src = currentUserData.img;
+    }
+    else{
+        userImg.src ="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+    }
+})()
 
 var htx = new XMLHttpRequest();
 htx.open("GET", "../data/data.json");
@@ -48,7 +61,6 @@ htx.send();
 (function showQuizzes() {
     if (currentUserData.quizzes) {
         currentUserData.quizzes.forEach(q => {
-            console.log(q)
             let quiz=document.createElement("div");
             quiz.className="progress_list_item";
             quiz.innerHTML=`
@@ -60,12 +72,12 @@ htx.send();
                             <h3>${q.score}</h3>
                         </div>
             `
-           progressList.appendChild(quiz);
+            progressList.appendChild(quiz);
         });
-
     }
     else {
-        coursesList.innerHTML = `<p>you has not any quiz</p>`
+        progressList.innerHTML = `<p>you has not any quiz</p>`
+        console.log('lollll')   
     }
 }
 )()

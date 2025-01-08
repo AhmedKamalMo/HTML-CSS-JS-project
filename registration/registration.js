@@ -4,6 +4,8 @@ function addUser() {
 
   let email = document.getElementById("emailinput").value;
   let password = document.getElementById("passwordinput").value;
+  let firstName = document.getElementById('fName').value
+  let lastName = document.getElementById('lName').value
 
   //check if user is aready register
   let isUser = users.find(user => user.email === email);
@@ -11,17 +13,16 @@ function addUser() {
     alert("User already exists");
   } else {
     //add user to local storage
-    users.push({ email: email, pass: password })
+    users.push({ firstName,lastName,email: email, pass: password })
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("currentUser", email);
-    console.log(localStorage.getItem('currentUser'))
-  
   }
 }
 
 
 let validName = true;
 let validPassword = false;
+
 
 var password1 = document.getElementById("passwordinput");
 var password2 = document.getElementById("conpassword");
