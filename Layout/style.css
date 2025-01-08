@@ -61,6 +61,7 @@ nav .userData {
     flex-direction: column;
     justify-content: center;
     width: auto;
+    position: relative;
 }
 
 nav .userData img {
@@ -70,6 +71,18 @@ nav .userData img {
 
 nav .userData p {
     font-size: 10px;
+}
+nav .userData .logout{
+    display: none;
+    width: 120px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    /* display: flex; */
+    justify-content: center;
+    box-shadow: 2px 2px 2px #dcdcdc;
+    position: absolute;
+    bottom: -40px;
 }
 
 footer {

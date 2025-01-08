@@ -85,9 +85,26 @@ document.addEventListener("DOMContentLoaded", function () {
             user.classList.add('userData')
             user.innerHTML = `
             <img src="${userData.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}"/>
-            <p>${userData.firstName + " " + userData.lastName}</p>
+            <!-- <p>${userData.firstName + " " + userData.lastName}</p> -->
+            <div class="logout">
+                <p><i class="fa-solid fa-right-from-bracket"></i> Logout</p>
+            </div>
         `;
-        nav.appendChild(user);
+            user.addEventListener('click', () => {
+                let logoutBox = document.getElementsByClassName('logout')[0];
+                if(logoutBox.style.display == 'flex'){
+                    logoutBox.style.display = 'none';
+                }
+                else{
+                    logoutBox.style.display = 'flex';
+                }
+                logoutBox.addEventListener('click',()=>{
+                    localStorage.removeItem('currentUser');
+                    window.location.href = '../index.html';
+                    
+                })
+            })
+            nav.appendChild(user);
         }
     })()
 });
