@@ -46,11 +46,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const footer = document.createElement('footer');
     footer.innerHTML = `
        
-        <div>
-          <a href="">Contact With Us</a>
-          <a href="">Steps</a>
-          <a href="">0128926565</a>
+       <div class="lets">
+        <h1>LETS Learn With <span class="highlight">Steps</span></h1>
+        <p>to upgrade your level.</p>
+    </div>
+    <div class="subscribe">
+        <p>write your email to notife you with the new courses </p>
+        <form>
+            <input type="email" placeholder="YOUR EMAIL" required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="contact-social">
+       
+        <div class="contact">
+            <p>CALL US</p>
+            <p><a href="tel:0285419786">02 8541 9786</a></p>
         </div>
+    </div>
       
     `;
     document.body.appendChild(footer);
