@@ -48,7 +48,7 @@ htx.onreadystatechange = function () {
         title.classList.add("lesson-title");
 
         poster.addEventListener("click", function () {
-          var videoPageUrl = `/incourse.html?title=${encodeURIComponent(
+          var videoPageUrl = `../Course/incourse.html?title=${encodeURIComponent(
             item.title
           )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
             category
@@ -135,12 +135,15 @@ function endQuiz() {
   practice.innerHTML = `Your score: ${score}/${questionIndex} <br> ${
     score >= Math.ceil(questionIndex * 0.6) ? "Congratulations!" : "Try again!"
   }`;
+  addQuizScore(category,mainTitle,score);
+
   questionIndex = 0;
   score = 0;
   timer = 30;
 }
 
 let addQuizScore=(courseName,lesson,score)=>{
+  
     let currentUser = localStorage.getItem("currentUser");
     let users =JSON.parse(localStorage.getItem("users"))||[];
     let newUsers = users.map((u)=>{
