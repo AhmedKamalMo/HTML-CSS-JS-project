@@ -79,13 +79,12 @@
 
 .lesson {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     margin-bottom: 10px;
 }
 
 .lesson-thumbnail {
-    width: 400px;
+    min-width: 200px;
     height: 120px;
     background-color: #ccc;
     border-radius: 8px;
