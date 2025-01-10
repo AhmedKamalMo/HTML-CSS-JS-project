@@ -78,6 +78,7 @@ main {
 .jmain {
     display: flex; 
     align-items: center; 
+    justify-content: center;
     margin-top: 90px;
     /* margin-left: 122px; */
 }
@@ -118,8 +119,8 @@ main {
 .kids {
     width: 300px;
     height: 350px;
-    margin-top: 25px;
-    margin-left: -55px;
+    /* margin-top: 25px;
+    margin-left: -55px; */
 }
 
 .skills {
