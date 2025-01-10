@@ -58,6 +58,15 @@ nav div .item {
     color: #86A788;
 cursor: pointer;
 }
+nav div .item:hover{
+    font-size: 26px;
+}
+.activeLink{
+    background-color: #ffb6c1a1;
+    padding: 5px 15px;
+    border-radius: 80px;
+    
+}
 
 nav .userData {
     display: flex;

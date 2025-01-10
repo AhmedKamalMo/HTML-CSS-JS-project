@@ -1,3 +1,5 @@
+
+
 let nav_items = [
     {
         "name": "Home",
@@ -5,7 +7,7 @@ let nav_items = [
     },
     {
         "name": "Courses",
-        "url": "/Courses/courses steps.html",
+        "url": "/Courses/courses-steps.html",
     },
     {
         "name": "My learning",
@@ -97,14 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
       
     `;
     document.body.appendChild(footer);
-    
+
     (() => {
         let nav = document.getElementById('nav-links');
         for (let i = 0; i < nav_items.length; i++) {
             let item = document.createElement('p');
             item.innerHTML = nav_items[i].name;
             item.classList.add('item');
-
+            if (window.location.pathname == nav_items[i].url) {
+                item.classList.add('activeLink');
+            }
             item.addEventListener('click', () => {
                 if (!localStorage.getItem('currentUser') && i == 2) {
                     modal.style.display = "flex"; // Show modal instead of alert
@@ -135,21 +139,23 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
             user.addEventListener('click', () => {
                 let logoutBox = document.getElementsByClassName('logout')[0];
-                if(logoutBox.style.display == 'flex'){
+                if (logoutBox.style.display == 'flex') {
                     logoutBox.style.display = 'none';
                 }
-                else{
+                else {
                     logoutBox.style.display = 'flex';
                 }
-                logoutBox.addEventListener('click',()=>{
+                logoutBox.addEventListener('click', () => {
                     localStorage.removeItem('currentUser');
                     window.location.href = '../index.html';
-                    
+
                 });
             });
             nav.appendChild(user);
         }
     })();
+   
+    
 });
 
 let getUserData = () => {
