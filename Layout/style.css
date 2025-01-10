@@ -24,7 +24,7 @@ nav {
     left: 25%;
     border-radius: 20px 20px 20px 20px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -39,10 +39,10 @@ nav p {
 }
 
 nav div {
-    width: 70%;
+    width: 65%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 5px;
 }
 
@@ -70,6 +70,7 @@ nav .userData {
 nav .userData img {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
 }
 
 nav .userData p {

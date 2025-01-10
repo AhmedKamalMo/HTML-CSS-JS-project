@@ -14,9 +14,7 @@ let nav_items = [
 ];
 
 
-{/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Marcellus+SC&family=Margarine&display=swap"
-        rel="stylesheet" /> */}
+
 document.addEventListener("DOMContentLoaded", function () {
 
     // Create and append the link element for the CSS file
