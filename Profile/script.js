@@ -29,7 +29,16 @@ let edituserdata = (newImg) => {
 }
 
 let editUserImg = (() => {
-    document.getElementById("userimg").addEventListener("click", function () {
+    let userImg= document.getElementById("userimg");
+    userImg.addEventListener('mouseover',()=>{
+        userImg.style.cursor = "pointer";
+        document.getElementsByClassName('edit')[0].style.display = 'flex';
+    })
+    userImg.addEventListener('mouseout',()=>{
+        userImg.style.cursor = "pointer";
+        document.getElementsByClassName('edit')[0].style.display = 'none';
+    })
+    userImg.addEventListener("click", function () {
         // Create a hidden file input dynamically
         const fileInput = document.createElement("input");
         fileInput.type = "file";
@@ -45,8 +54,9 @@ let editUserImg = (() => {
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     const userImage = document.getElementById("userimg");
-                    userImage.src = e.target.result; // Update the user image preview
+                    // userImage.src = e.target.result; // Update the user image preview
                     edituserdata(e.target.result);
+                    window.location.href = 'index.html'
                 };
                 reader.readAsDataURL(file); // Read the file as a data URL
             } else {
