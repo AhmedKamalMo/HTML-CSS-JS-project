@@ -11,8 +11,7 @@ let nav_items = [
         "name": "My learning",
         "url": "/Profile/index.html",
     },
-]
-
+];
 
 
 
@@ -42,50 +41,87 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
     document.body.insertBefore(header, document.body.firstChild);
 
+    // Create the modal for login alert
+    const modal = document.createElement('div');
+    modal.id = "popup-box";
+    modal.style.display = "none";
+    modal.style.position = "fixed";
+    modal.style.inset = "0";
+    modal.style.background = "rgba(0, 0, 0, 0.76)";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+
+    modal.innerHTML = `
+        <div style="background: white; padding: 20px; border-radius: 5px; position: relative; text-align: center;">
+            <button id="close-modal" style="position: absolute; top: 10px; right: 10px; background: transparent; border: none; font-size: 18px; color:red; cursor: pointer;">&times;</button>
+            <h1 style="color: #7e1818;">Please login to access this page</h1>
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Close modal functionality
+    const closeModal = document.getElementById('close-modal');
+    closeModal.addEventListener('click', () => {
+        modal.style.display = "none";
+    });
+
     // Create and insert the footer element
     const footer = document.createElement('footer');
     footer.innerHTML = `
        
-        <div>
-          <a href="">Contact With Us</a>
-          <a href="">Steps</a>
-          <a href="">0128926565</a>
+       <div class="lets">
+        <h1>LETS Learn With <span class="highlight">Steps</span></h1>
+        <p>to upgrade your level.</p>
+    </div>
+    <div class="subscribe">
+        <p>write your email to notife you with the new courses </p>
+        <form>
+            <input type="email" placeholder="YOUR EMAIL" required>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="contact-social">
+       
+        <div class="contact">
+            <p>CALL US</p>
+            <p><a href="tel:0285419786">02 8541 9786</a></p>
         </div>
+    </div>
       
     `;
     document.body.appendChild(footer);
+    
     (() => {
         let nav = document.getElementById('nav-links');
         for (let i = 0; i < nav_items.length; i++) {
             let item = document.createElement('p');
             item.innerHTML = nav_items[i].name;
-            item.classList.add('item')
+            item.classList.add('item');
 
             item.addEventListener('click', () => {
                 if (!localStorage.getItem('currentUser') && i == 2) {
-                    alert("Please login to access this page");
+                    modal.style.display = "flex"; // Show modal instead of alert
                 } else {
                     window.location.href = nav_items[i].url;
                 }
-            })
+            });
             nav.appendChild(item);
         }
         if (!localStorage.getItem('currentUser')) {
             let login = document.createElement('p');
             login.innerHTML = '<i class="fa-solid fa-right-to-bracket" style="font-size: 20px;"></i>';
-            login.classList.add('item')
+            login.classList.add('item');
             login.addEventListener('click', () => {
-                window.location.href = '../Login/login.html'
-            })
+                window.location.href = '../Login/login.html';
+            });
             nav.appendChild(login);
         }
         else {
             let userData = getUserData();
             let user = document.createElement('div');
-            user.classList.add('userData')
+            user.classList.add('userData');
             user.innerHTML = `
             <img src="${userData.img || 'https://cdn-icons-png.flaticon.com/512/149/149071.png'}"/>
-            <!-- <p>${userData.firstName + " " + userData.lastName}</p> -->
             <div class="logout">
                 <p><i class="fa-solid fa-right-from-bracket"></i> Logout</p>
             </div>
@@ -102,11 +138,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     localStorage.removeItem('currentUser');
                     window.location.href = '../index.html';
                     
-                })
-            })
+                });
+            });
             nav.appendChild(user);
         }
-    })()
+    })();
 });
 
 let getUserData = () => {
