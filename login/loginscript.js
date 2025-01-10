@@ -7,10 +7,10 @@
     //   localStorage.userpassword = pass;
 
 
-    var dne = document.getElementById("form");
+    var loginbtn = document.getElementById("login-btn");
 
-    dne.addEventListener("submit", function (e) {
-
+    loginbtn.addEventListener("click", function (e) {
+      e.preventDefault();
     let email = document.getElementById("emailinput").value;
     let password = document.getElementById("passwordinput").value;
     var errrpass = document.getElementById("errorpass");
@@ -19,12 +19,13 @@
     var users = JSON.parse(localStorage.getItem("users")) || []
     
     //find user bu email
-    var user = users.find(user => user.email === emails);
+    var user = users.find(user => user.email === email);
+    
     if (user) {
-      if (user.password === pass) {
-        alert("Welcome " + user.name);
-        localStorage.setItem("currentUser", emails);
-        window.location.href = "index.html";
+      if (user.pass == password) {
+        alert("Welcome " + user.firstName);
+        localStorage.setItem("currentUser", email);
+        window.location.href = "../index.html";
         } else {
           errrpass.innerHTML = "Wrong password";
         }
@@ -32,7 +33,7 @@
           errrpass.innerHTML = "User not found";
           }
           
-          e.preventDefault();
+          
           });
           
     //   if (emailindex !== -1 && passval[emailindex] === pass ) {

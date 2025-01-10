@@ -14,7 +14,9 @@ let nav_items = [
 ];
 
 
-
+{/* <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Marcellus+SC&family=Margarine&display=swap"
+        rel="stylesheet" /> */}
 document.addEventListener("DOMContentLoaded", function () {
 
     // Create and append the link element for the CSS file
@@ -28,6 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     link2.rel = 'stylesheet';
     link2.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
     document.head.appendChild(link2);
+    //create and append the link element for the font file
+    const link3 = document.createElement('link');
+    link3.rel = 'stylesheet';
+    link3.href = "https://fonts.googleapis.com/css2?family=Mansalva&family=Marcellus+SC&family=Margarine&display=swap";
+    document.head.appendChild(link3);
+
+
 
     // Create and insert the header element
     const header = document.createElement('header');
