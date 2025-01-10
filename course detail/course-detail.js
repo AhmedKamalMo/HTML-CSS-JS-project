@@ -2,7 +2,7 @@ var params = new URLSearchParams(window.location.search);
 var category = params.get("category");
 
 var courseImg = document.getElementsByClassName("video-placeholder")[0];
-
+var enrollcourse = document.getElementsByClassName("enroll")[0];
 var htx = new XMLHttpRequest();
 htx.open("GET", "../data/data.json");
 
@@ -31,7 +31,6 @@ htx.onreadystatechange = function () {
     if (course.videos) {
       var counter = 1;
       course.videos.forEach(function (video) {
-        console.log(video.title);
         var lesson = document.createElement("div");
         lesson.classList.add("lesson");
 
@@ -64,6 +63,15 @@ htx.onreadystatechange = function () {
           )}`;
           window.location.href = videoPageUrl;
         });
+        enrollcourse.addEventListener("click", () => {
+          addCourseToUser(category);
+          var videoPageUrl = `../Course/incourse.html?title=${encodeURIComponent(
+            course.videos[0].title
+          )}&src=${encodeURIComponent(course.videos[0].src)}&category=${encodeURIComponent(
+            category
+          )}`;
+          window.location.href = videoPageUrl;
+        });
       });
     } else {
       console.error("No videos found for this category.");
@@ -71,3 +79,19 @@ htx.onreadystatechange = function () {
   }
 };
 htx.send();
+let addCourseToUser = (courseID) => {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  let newUsers = users.map((u) => {
+    if (u.email == currentUser) {
+      if (!u.courses) {
+        u.courses = [];
+      }
+      if (!u.courses.includes(courseID)) {
+        u.courses.push(courseID);
+      }
+    }
+    return u;
+  });
+  localStorage.setItem("users", JSON.stringify(newUsers));
+};

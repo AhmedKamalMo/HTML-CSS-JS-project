@@ -117,3 +117,21 @@
 .lesson-title {
     font-size: 16px;
 }
+
+.enroll {
+    padding: 10px 20px;
+    background-color: #91c788;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    position: absolute;
+    top: 470px;
+    left: 980px;
+    border: 0px;
+}
+
+.enroll:hover {
+    background-color: #78b370;
+}
