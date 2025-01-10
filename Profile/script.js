@@ -16,6 +16,45 @@ let showUserData = (() => {
     userImg.src = currentUserData.img || "https://cdn-icons-png.flaticon.com/512/149/149071.png";
 
 })()
+let edituserdata = (newImg) => {
+    currentUserData.img = newImg;
+    let users = JSON.parse(localStorage.getItem("users"))
+    users.map((u) => {
+        if (u.email == currentUserData.email) {
+            u.img = newImg;
+        }
+        return u;
+    });
+    localStorage.setItem("users", JSON.stringify(users));
+}
+
+let editUserImg = (() => {
+    document.getElementById("userimg").addEventListener("click", function () {
+        // Create a hidden file input dynamically
+        const fileInput = document.createElement("input");
+        fileInput.type = "file";
+        fileInput.accept = "image/*"; // Accept only image files
+
+        // Trigger the file input click
+        fileInput.click();
+
+        // Handle the file selection
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files[0];
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const userImage = document.getElementById("userimg");
+                    userImage.src = e.target.result; // Update the user image preview
+                    edituserdata(e.target.result);
+                };
+                reader.readAsDataURL(file); // Read the file as a data URL
+            } else {
+                alert("Please select a valid image file.");
+            }
+        });
+    });
+})()
 
 var htx = new XMLHttpRequest();
 htx.open("GET", "../data/data.json");
