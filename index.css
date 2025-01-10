@@ -66,6 +66,12 @@ nav div a{
 body{
     background-color: #FFFDEC;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .jmain {
     display: flex; 

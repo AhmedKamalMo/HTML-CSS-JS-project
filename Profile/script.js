@@ -41,6 +41,11 @@ htx.onreadystatechange = function () {
                             <p>${cData.description}</p>
                         </div>
                 `
+                course.addEventListener('click', () => {
+                    var videoPageUrl = `../course detail/course-detail.html?&category=${encodeURIComponent(c)}`;
+                    window.location.href = videoPageUrl;
+
+                })
                 coursesList.appendChild(course);
 
             });
