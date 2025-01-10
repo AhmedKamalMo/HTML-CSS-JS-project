@@ -4,25 +4,25 @@ function getlocal() {
 }
 
 function getpassword() {
-    var email = document.getElementById("emailinput").value;
+    var email = document.getElementById("emailinput").value; 
+
+    var { users } = getlocal(); 
 
 
-    var { users } = getlocal();
+    let user = users.find(user => user.email === email);
 
-    //find user by email
-    let user = users.find(user=>user.email===email)
-
-    if (user ) {
-        // If the email exists, show the corresponding password
+    if (user) {
+        
         document.getElementById("show").innerText =
-            "Your password is: " + user.password;
+            "Your password is: " + user.pass; 
     } else {
-        // If the email does not exist
+        
         document.getElementById("show").innerText =
-            "There is no email with this name";
+            "There email address is not registered";
     }
 }
 
+
 function gologein() {
-    location.href = "../login/login.html"
+    location.href = "../login/login.html";  // Go to login page
 }
