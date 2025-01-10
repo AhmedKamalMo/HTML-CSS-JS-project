@@ -106,14 +106,15 @@ function showQuestion() {
       if (question) {
         var questionElement = document.createElement("p");
         questionElement.textContent = question.question;
+        questionElement.classList.add('question');
         practice.appendChild(questionElement);
 
         question.options.forEach((option) => {
-          var button = document.createElement("button");
+          var button = document.createElement("div");
           button.textContent = option;
-          button.style.background = "green";
+          button.classList.add('option')
           button.style.margin = "5px";
-          button.style.minWidth = "20px";
+          // button.style.minWidth = "20px";
           button.onclick = function () {
             if (option === question.correct) score++;
             questionIndex++;
@@ -134,7 +135,7 @@ function showQuestion() {
 
 function endQuiz() {
   clearInterval(interval);
-  practice.innerHTML = `Your score: ${score}/${questlength} <br> ${
+  divtimer.innerHTML = `Your score: ${score}/${questlength} <br> ${
     score >= Math.ceil(questlength * 0.6) ? "Congratulations!" : "Try again!"
   }`;
   addQuizScore(category, mainTitle, score, questlength);
