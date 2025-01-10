@@ -121,3 +121,22 @@ img {
     width: 350px;
     height: 350px;
 }
+.input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.input-container{
+    position: relative;
+    display: flex;
+}
+button#showpass{
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 0px 15px 15px 0px;
+    cursor: pointer;
+    top: 30%;
+    right: 25px;
+}

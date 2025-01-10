@@ -57,5 +57,15 @@
 //     localStorage.removeItem("userpassword");
 //   }
   
-  
-  
+var pass = document.getElementById("passwordinput");
+var eyeIcon = document.getElementById("eyeIcon");
+
+function togglePassword() {
+  if (pass.type === "password") {
+    pass.type = "text";
+    eyeIcon.className = "fas fa-eye-slash";
+  } else {
+    pass.type = "password";
+    eyeIcon.className = "fas fa-eye";
+  }
+}

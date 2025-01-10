@@ -20,6 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Mansalva&family=Margarine&display=swap"
       rel="stylesheet"
     />
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
    
@@ -36,17 +38,22 @@
             <input type="email" id="emailinput" name="email" required />
           </div>
           <div class="input-group">
-            <label for="password" class="pass">password</label>
+            <label for="password" class="pass">Password</label>
+            <div class="input-container">
             <input type="password" id="passwordinput" name="password" required />
+            <button type="button" id="showpass" onclick="togglePassword()"> 
+              <i id="eyeIcon" class="fas fa-eye"></i>
+            </button>
+          </div>
           </div>
 
           <div class="link">
             <a href="../forgetPassword/forgetpass.html">Forgot Password?</a>
             <a href="../registration/registration.html">Dont have an account?</a>
           </div>
-        <span id="errorpass" style="color: red; font-size: 20px;"></span>
-
-          <button type="submit" id="login-btn" class="login-button">Login</button>
+        <span id="errorpass" class="error-message" style="color: red; font-size: 20px;"></span>
+<br>
+        <button type="submit" id="login-btn" class="login-button">Login</button>
 
           <!-- <button onclick="removelocal()">removelocal</button> -->
 

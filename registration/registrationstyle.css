@@ -1,6 +1,7 @@
-*{
+* {
     margin: 0;
 }
+
 header {
     background-color: #9EB2A0;
     height: 65px;
@@ -20,7 +21,7 @@ nav {
     margin-top: 70px;
 }
 
-nav p{
+nav p {
     font-family: "Mansalva", serif;
     font-size: 36px;
     font-weight: 400;
@@ -28,14 +29,14 @@ nav p{
     padding-left: 10px;
 }
 
-nav div{
+nav div {
     display: flex;
     align-items: center;
     padding-right: 10px;
     padding-left: 130px;
 }
 
-nav div a{
+nav div a {
     font-family: "Margarine", serif;
     font-size: 24px;
     font-weight: 400;
@@ -44,9 +45,10 @@ nav div a{
     padding: 0 15px;
 }
 
-body{
+body {
     background-color: #FFFDEC;
 }
+
 .registration-container {
     margin: 82px auto;
     width: 441px;
@@ -57,34 +59,39 @@ body{
     background-color: #9EB2A0;
     text-align: center;
 }
-form{
+
+form {
     background-color: #9EB2A0;
     border-radius: 40px 40px 40px 40px;
 }
-.em{
+
+.em {
     padding-right: 300px;
     font-family: "Margarine", serif;
     font-size: 22px;
     color: #FFFFFF;
 }
-.pass{
-font-family: "Margarine", serif;
-color: #FFFFFF;
-padding-right: 270px;
-font-size: 26px;
+
+.pass {
+    font-family: "Margarine", serif;
+    color: #FFFFFF;
+    padding-right: 270px;
+    font-size: 26px;
 }
-.conpass{
+
+.conpass {
     font-family: "Margarine", serif;
     color: #FFFFFF;
     padding-right: 200px;
     font-size: 22px;
 }
+
 h2 {
     text-align: center;
     /* margin-bottom: 83px; */
     padding-top: 41px;
     padding-bottom: 41px;
-    
+
 
     font-family: "Margarine";
     font-size: 36px;
@@ -95,21 +102,25 @@ h2 {
     text-decoration-skip-ink: none;
     color: #FFFFFF;
 }
+
 .input-group {
     margin-bottom: 15px;
 }
+
 .input-group label {
     display: block;
     margin-bottom: 5px;
 }
+
 .input-group input {
     width: 365px;
     height: 40px;
     top: 354px;
     left: 500px;
     border-radius: 20px 20px 20px 20px;
-    border-color: white;
+    border-color: transparent;
 }
+
 .Registration-button {
     cursor: pointer;
     width: 263px;
@@ -128,10 +139,12 @@ h2 {
     background-color: #FFE2E2;
 
 }
+
 .link {
     /* text-align: center; */
     margin-top: 10px;
 }
+
 .link a {
     /* color: #4CAF50;  */
     /* text-decoration: none; */
@@ -140,10 +153,12 @@ h2 {
     padding-right: 250px;
     font-size: 16px;
 }
+
 .link a:hover {
     text-decoration: underline;
 }
-img{
+
+img {
     margin-top: 360px;
     margin-left: 100px;
     width: 400px;
