@@ -21,10 +21,31 @@
     display: flex;
     align-items: center;
     gap: 20px;
+
     position: absolute;
     top: 43%;
     left: 5%;
 }
+.profile-img {
+position: relative;
+}
+.profile-img .edit{
+    display: none;
+    position: absolute;
+    top:75px;
+    width: 150px;
+    height: 75px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+
+    background-color: #d6d6d658;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: #ffffff;
+}
+
 
 .profile .profile__info>div img {
    
