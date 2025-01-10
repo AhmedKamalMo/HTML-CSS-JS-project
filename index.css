@@ -76,8 +76,8 @@ main {
 }
 
 .jmain {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
     margin-top: 90px;
     /* margin-left: 122px; */
@@ -88,7 +88,7 @@ main {
     height: 342px;
     border-radius: 40px;
     background-color: #ffe2e2;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     box-shadow: 10px 10px 10px rgb(179, 179, 179);
@@ -101,19 +101,32 @@ main {
     margin: 100px 0 50px 70px;
 }
 
-.join button {
+/* button {
     border-radius: 30px;
     border: none;
     background-color: #86A788;
     color: #FFFFFF;
     width: 103px;
     height: 70px;
-    /* font-family: Margarine; */
+    /* font-family: Margarine; 
     font-size: 26px;
     font-weight: 100;
-    margin-left: 160px;
+    } */
+.join button {
+    background-color: #86A788;
     cursor: pointer;
+    margin-left: 160px;
+    font-size: 20px;
+    color: #FFE2E2;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 40px;
+    border: none;
+}
 
+.join button:hover {
+    padding: 12px 22px;
+    background-color: #86a7889b;
 }
 
 .kids {
@@ -151,7 +164,8 @@ main {
     display: flex;
     /* background-color: yellow; */
 }
-.quete p{
+
+.quete p {
     font-family: "Marcellus SC", serif;
     font-size: 35px;
     font-weight: 500;
@@ -187,6 +201,7 @@ main {
     /* width: 80%;  */
     /* margin: 0 auto;  */
 }
+
 .card {
     display: flex;
     flex-direction: column;
@@ -230,9 +245,10 @@ footer div{
 } */
 
 /* slider */
-#slider{
+#slider {
     height: 400px;
 }
+
 .backarrow {
     position: absolute;
     top: 720px;

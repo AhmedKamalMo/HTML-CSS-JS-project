@@ -89,6 +89,8 @@
     text-align: center;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
+
 }
 .practice button:hover{
     padding: 12px 22px;
