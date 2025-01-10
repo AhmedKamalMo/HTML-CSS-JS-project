@@ -2,11 +2,12 @@
     padding-top: 90px;
     width: 90%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 50px auto;
     background-color: #fff;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .video-placeholder {
@@ -71,6 +72,7 @@
 
 .lessons {
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .lessons h3 {
@@ -115,4 +117,22 @@
 
 .lesson-title {
     font-size: 16px;
+}
+
+.enroll {
+    padding: 10px 20px;
+    background-color: #91c788;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 5px;
+    position: absolute;
+    top: 470px;
+    left: 980px;
+    border: 0px;
+}
+
+.enroll:hover {
+    background-color: #78b370;
 }

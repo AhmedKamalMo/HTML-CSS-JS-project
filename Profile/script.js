@@ -16,6 +16,55 @@ let showUserData = (() => {
     userImg.src = currentUserData.img || "https://cdn-icons-png.flaticon.com/512/149/149071.png";
 
 })()
+let edituserdata = (newImg) => {
+    currentUserData.img = newImg;
+    let users = JSON.parse(localStorage.getItem("users"))
+    users.map((u) => {
+        if (u.email == currentUserData.email) {
+            u.img = newImg;
+        }
+        return u;
+    });
+    localStorage.setItem("users", JSON.stringify(users));
+}
+
+let editUserImg = (() => {
+    let userImg= document.getElementById("userimg");
+    userImg.addEventListener('mouseover',()=>{
+        userImg.style.cursor = "pointer";
+        document.getElementsByClassName('edit')[0].style.display = 'flex';
+    })
+    userImg.addEventListener('mouseout',()=>{
+        userImg.style.cursor = "pointer";
+        document.getElementsByClassName('edit')[0].style.display = 'none';
+    })
+    userImg.addEventListener("click", function () {
+        // Create a hidden file input dynamically
+        const fileInput = document.createElement("input");
+        fileInput.type = "file";
+        fileInput.accept = "image/*"; // Accept only image files
+
+        // Trigger the file input click
+        fileInput.click();
+
+        // Handle the file selection
+        fileInput.addEventListener("change", function () {
+            const file = fileInput.files[0];
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const userImage = document.getElementById("userimg");
+                    // userImage.src = e.target.result; // Update the user image preview
+                    edituserdata(e.target.result);
+                    window.location.href = 'index.html'
+                };
+                reader.readAsDataURL(file); // Read the file as a data URL
+            } else {
+                alert("Please select a valid image file.");
+            }
+        });
+    });
+})()
 
 var htx = new XMLHttpRequest();
 htx.open("GET", "../data/data.json");
@@ -41,6 +90,11 @@ htx.onreadystatechange = function () {
                             <p>${cData.description}</p>
                         </div>
                 `
+                course.addEventListener('click', () => {
+                    var videoPageUrl = `../course detail/course-detail.html?&category=${encodeURIComponent(c)}`;
+                    window.location.href = videoPageUrl;
+
+                })
                 coursesList.appendChild(course);
 
             });
@@ -64,7 +118,7 @@ htx.send();
                             <p>${q.courseName}</p>
                         </div>
                         <div class="grede">
-                            <h3>${q.score}</h3>
+                            <h3>${q.score}/${q.questionIndex}</h3>
                         </div>
             `
             progressList.appendChild(quiz);

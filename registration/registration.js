@@ -1,49 +1,56 @@
-var users = JSON.parse(localStorage.getItem('users')) || [];
+var users = JSON.parse(localStorage.getItem("users")) || [];
 
-function addUser() {
+let emailRegex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/;
+let passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+let nameRegex = /^[A-Za-z][A-Za-z]*$/;
 
+var form = document.getElementById("form");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
   let email = document.getElementById("emailinput").value;
   let password = document.getElementById("passwordinput").value;
-  let firstName = document.getElementById('fName').value
-  let lastName = document.getElementById('lName').value
+  let firstName = document.getElementById("fName").value;
+  let lastName = document.getElementById("lName").value;
+  let isValidForm = true;
 
-  //check if user is aready register
-  let isUser = users.find(user => user.email === email);
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    isValidForm = false;
+  }
+
+  if (!passwordRegex.test(password)) {
+    alert(
+      "Password must be at least 8 characters and contain at least one letter and one number."
+    );
+    isValidForm = false;
+  }
+
+  if (!nameRegex.test(firstName) || !nameRegex.test(lastName)) {
+    alert(
+      "First name and last name should not contain numbers or special characters."
+    );
+    isValidForm = false;
+  }
+
+  let conpassword = document.getElementById("conpassword").value;
+  if (password !== conpassword) {
+    alert("Passwords do not match.");
+    isValidForm = false;
+  }
+
+  let isUser = users.find((user) => user.email === email);
   if (isUser) {
-    alert("User already exists");
-  } else {
-    //add user to local storage
-    users.push({ firstName,lastName,email: email, pass: password })
+    alert("User already exists.");
+    isValidForm = false;
+  }
+
+  if (isValidForm) {
+    users.push({ firstName, lastName, email, pass: password });
     localStorage.setItem("users", JSON.stringify(users));
     localStorage.setItem("currentUser", email);
-  }
-}
-
-
-let validName = true;
-let validPassword = false;
-
-
-var password1 = document.getElementById("passwordinput");
-var password2 = document.getElementById("conpassword");
-var errrpass = document.getElementById("errorpass");
-
-document.getElementById("conpassword").addEventListener("blur", function () {
-  if (passwordinput.value === conpassword.value) {
-
-    validPassword = true;
-
-  } else {
-    errrpass.innerHTML = "the password not mathes ";
-    errrpass.style.color = "red";
-    validPassword = false;
-  }
-  //
-});
-
-var dne = document.getElementById("form");
-dne.addEventListener("submit", function (e) {
-  if (!validName || !validPassword) {
-    e.preventDefault();
+    alert("User successfully added!");
+    // form.reset();
+    location.href="../index.html"
   }
 });

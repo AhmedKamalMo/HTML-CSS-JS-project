@@ -1,3 +1,5 @@
+
+
 let nav_items = [
     {
         "name": "Home",
@@ -5,7 +7,7 @@ let nav_items = [
     },
     {
         "name": "Courses",
-        "url": "/Courses/courses steps.html",
+        "url": "/Courses/courses-steps.html",
     },
     {
         "name": "My learning",
@@ -13,7 +15,7 @@ let nav_items = [
     },
 ];
 
-let currentUserData;
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -28,6 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     link2.rel = 'stylesheet';
     link2.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css";
     document.head.appendChild(link2);
+    //create and append the link element for the font file
+    const link3 = document.createElement('link');
+    link3.rel = 'stylesheet';
+    link3.href = "https://fonts.googleapis.com/css2?family=Mansalva&family=Marcellus+SC&family=Margarine&display=swap";
+    document.head.appendChild(link3);
+
+
 
     // Create and insert the header element
     const header = document.createElement('header');
@@ -90,14 +99,16 @@ document.addEventListener("DOMContentLoaded", function () {
       
     `;
     document.body.appendChild(footer);
-    
+
     (() => {
         let nav = document.getElementById('nav-links');
         for (let i = 0; i < nav_items.length; i++) {
             let item = document.createElement('p');
             item.innerHTML = nav_items[i].name;
             item.classList.add('item');
-
+            if (window.location.pathname == nav_items[i].url) {
+                item.classList.add('activeLink');
+            }
             item.addEventListener('click', () => {
                 if (!localStorage.getItem('currentUser') && i == 2) {
                     modal.style.display = "flex"; // Show modal instead of alert
@@ -117,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
             nav.appendChild(login);
         }
         else {
-            let userData = getUser();
+            let userData = getUserData();
             let user = document.createElement('div');
             user.classList.add('userData');
             user.innerHTML = `
@@ -128,26 +139,27 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
             user.addEventListener('click', () => {
                 let logoutBox = document.getElementsByClassName('logout')[0];
-                if(logoutBox.style.display == 'flex'){
+                if (logoutBox.style.display == 'flex') {
                     logoutBox.style.display = 'none';
                 }
-                else{
+                else {
                     logoutBox.style.display = 'flex';
                 }
-                logoutBox.addEventListener('click',()=>{
+                logoutBox.addEventListener('click', () => {
                     localStorage.removeItem('currentUser');
                     window.location.href = '../index.html';
-                    
+
                 });
             });
             nav.appendChild(user);
         }
     })();
+   
+    
 });
 
-let getUser = () => {
+let getUserData = () => {
     let cUserEmail = localStorage.getItem("currentUser");
-    let users = JSON.parse(localStorage.getItem("users"));
-    let currentUserData = users.find((u) => { return u.email === cUserEmail });
-    return currentUserData;
-};
+    let users = JSON.parse(localStorage.getItem("users"))
+    return users.find((u) => { return u.email === cUserEmail });
+}

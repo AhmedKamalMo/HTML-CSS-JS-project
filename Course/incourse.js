@@ -48,7 +48,7 @@ htx.onreadystatechange = function () {
         title.classList.add("lesson-title");
 
         poster.addEventListener("click", function () {
-          var videoPageUrl = `/incourse.html?title=${encodeURIComponent(
+          var videoPageUrl = `../Course/incourse.html?title=${encodeURIComponent(
             item.title
           )}&src=${encodeURIComponent(item.src)}&category=${encodeURIComponent(
             category
@@ -91,10 +91,11 @@ function startQuiz() {
 
   showQuestion();
 }
-
+var questlength =0;
 function showQuestion() {
   var videos = JsonData[category].videos;
   var quest = videos[count] && videos[count].quiz;
+  questlength=quest.length;
 
   if (quest && quest.length > 0) {
     practice.innerHTML = "";
@@ -105,13 +106,15 @@ function showQuestion() {
       if (question) {
         var questionElement = document.createElement("p");
         questionElement.textContent = question.question;
+        questionElement.classList.add('question');
         practice.appendChild(questionElement);
 
         question.options.forEach((option) => {
-          var button = document.createElement("button");
+          var button = document.createElement("div");
           button.textContent = option;
-          button.style.background = "green";
+          button.classList.add('option')
           button.style.margin = "5px";
+          // button.style.minWidth = "20px";
           button.onclick = function () {
             if (option === question.correct) score++;
             questionIndex++;
@@ -132,24 +135,25 @@ function showQuestion() {
 
 function endQuiz() {
   clearInterval(interval);
-  practice.innerHTML = `Your score: ${score}/${questionIndex} <br> ${
-    score >= Math.ceil(questionIndex * 0.6) ? "Congratulations!" : "Try again!"
+  divtimer.innerHTML = `Your score: ${score}/${questlength} <br> ${
+    score >= Math.ceil(questlength * 0.6) ? "Congratulations!" : "Try again!"
   }`;
+  addQuizScore(category, mainTitle, score, questlength);
+
   questionIndex = 0;
   score = 0;
   timer = 30;
 }
 
-let addQuizScore=(courseName,lesson,score)=>{
-    let currentUser = localStorage.getItem("currentUser");
-    let users =JSON.parse(localStorage.getItem("users"))||[];
-    let newUsers = users.map((u)=>{
-      if(u.email==currentUser){
-        if(!u.quizzes)
-          u.quizzes=[];
-        u.quizzes.push({courseName,lesson,score});
-      }
-      return u;
-    });
-    localStorage.setItem("users",JSON.stringify(newUsers));
-}
+let addQuizScore = (courseName, lesson, score, questionIndex) => {
+  let currentUser = localStorage.getItem("currentUser");
+  let users = JSON.parse(localStorage.getItem("users")) || [];
+  let newUsers = users.map((u) => {
+    if (u.email == currentUser) {
+      if (!u.quizzes) u.quizzes = [];
+      u.quizzes.push({ courseName, lesson, score, questionIndex });
+    }
+    return u;
+  });
+  localStorage.setItem("users", JSON.stringify(newUsers));
+};
