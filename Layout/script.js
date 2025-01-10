@@ -13,7 +13,7 @@ let nav_items = [
     },
 ]
 
-let currentUserData;
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             nav.appendChild(login);
         }
         else {
-            let userData = getUser();
+            let userData = getUserData();
             let user = document.createElement('div');
             user.classList.add('userData')
             user.innerHTML = `
@@ -109,9 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })()
 });
 
-let getUser = () => {
+let getUserData = () => {
     let cUserEmail = localStorage.getItem("currentUser");
     let users = JSON.parse(localStorage.getItem("users"))
-    let currentUserData = users.find((u) => { return u.email === cUserEmail });
-    return currentUserData;
+    return users.find((u) => { return u.email === cUserEmail });
 }
