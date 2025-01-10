@@ -32,10 +32,12 @@ position: relative;
 .profile-img .edit{
     display: none;
     position: absolute;
-    top:0;
+    top:75px;
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    height: 75px;
+    border-bottom-left-radius: 75px;
+    border-bottom-right-radius: 75px;
+
     background-color: #d6d6d658;
     /* display: flex; */
     justify-content: center;
