@@ -64,7 +64,7 @@ htx.send();
                             <p>${q.courseName}</p>
                         </div>
                         <div class="grede">
-                            <h3>${q.score}</h3>
+                            <h3>${q.score}/${q.questionIndex}</h3>
                         </div>
             `
             progressList.appendChild(quiz);

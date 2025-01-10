@@ -135,14 +135,14 @@ function endQuiz() {
   practice.innerHTML = `Your score: ${score}/${questionIndex} <br> ${
     score >= Math.ceil(questionIndex * 0.6) ? "Congratulations!" : "Try again!"
   }`;
-  addQuizScore(category,mainTitle,score);
+  addQuizScore(category,mainTitle,score,questionIndex);
 
   questionIndex = 0;
   score = 0;
   timer = 30;
 }
 
-let addQuizScore=(courseName,lesson,score)=>{
+let addQuizScore=(courseName,lesson,score,questionIndex)=>{
   
     let currentUser = localStorage.getItem("currentUser");
     let users =JSON.parse(localStorage.getItem("users"))||[];
@@ -150,7 +150,7 @@ let addQuizScore=(courseName,lesson,score)=>{
       if(u.email==currentUser){
         if(!u.quizzes)
           u.quizzes=[];
-        u.quizzes.push({courseName,lesson,score});
+        u.quizzes.push({courseName,lesson,score,questionIndex});
       }
       return u;
     });
