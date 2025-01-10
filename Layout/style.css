@@ -56,7 +56,7 @@ nav div .item {
     text-decoration-skip-ink: none;
     text-decoration: none;
     color: #86A788;
-    /* padding-left: 50px; */
+cursor: pointer;
 }
 
 nav .userData {

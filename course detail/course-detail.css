@@ -71,6 +71,7 @@
 
 .lessons {
     margin-top: 20px;
+    cursor: pointer;
 }
 
 .lessons h3 {
